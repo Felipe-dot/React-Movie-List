@@ -1,11 +1,22 @@
 import { useState, useEffect } from "react";
-import { GenreResponseProps , MovieProps } from "../App";
+import { GenreResponseProps} from "../App";
 import { api } from "../services/api";
 import { MovieCard } from '../components/MovieCard';
 
 interface ContentProps {
   selectedGenreId:number;
   setSelectedGenreId: (id:number) => void;
+}
+
+interface MovieProps {
+  imdbID: string;
+  Title: string;
+  Poster: string;
+  Ratings: Array<{
+    Source: string;
+    Value: string;
+  }>;
+  Runtime: string;
 }
 
 export function Content({selectedGenreId, setSelectedGenreId}: ContentProps) {

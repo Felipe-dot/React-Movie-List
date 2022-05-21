@@ -13,17 +13,6 @@ export interface GenreResponseProps {
   title: string;
 }
 
-export interface MovieProps {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Ratings: Array<{
-    Source: string;
-    Value: string;
-  }>;
-  Runtime: string;
-}
-
 export function App() {
   const [selectedGenreId, setSelectedGenreId] = useState(1);
 
